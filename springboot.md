@@ -11,6 +11,23 @@ spring中大量的应用注解，感觉用起来很方便，但是其背后的�
 
 - 注解只有成员变量，没有方法 
 
+## JsonInclude
+JsonInclude  是一个类级别的设置，JsonInclude.Include.NON_EMPTY标识只有非NULL的值才会被纳入json string之中，其余的都被忽略，比如这里的location属性，并没有出现在最终的结果字符串中。
+
+## FeignClient
+- 用来修饰接口类型
+- 看起来像是一个方便封装了远程调用的接口，给程序提供一个代码接口，同时将相应的远程调用绑定起来。
+没有研究很深入，第一感觉是方便进行远程调用。
+
+OpenFeign是什么？
+OpenFeign是一个声明式的web服务客户端，让编写web服务客户端变的非常容易，只需要创建一个接口并在接口上添加注解即可，openFeign的前身是Feign，后者目前已经停更了，openFeign是SpringCloud在Feign的基础上支持了Spring MVC的注解，并通过动态代理的方式产生实现类来做负载均衡并进行调用其他服务。
+
+## CronTrigger
+
+
+## ConfigurationProperties
+可以直接将外部的属性转换为内部的类，比如application.yml，或者.properties文件
+
 ## Configuration
 
 ## Retention
