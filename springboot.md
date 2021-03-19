@@ -11,8 +11,9 @@ spring中大量的应用注解，感觉用起来很方便，但是其背后的�
 
 - 注解只有成员变量，没有方法 
 
-## JsonInclude
-JsonInclude  是一个类级别的设置，JsonInclude.Include.NON_EMPTY标识只有非NULL的值才会被纳入json string之中，其余的都被忽略，比如这里的location属性，并没有出现在最终的结果字符串中。
+## Qualifier
+今天遇到一个exception，栈非常的长，底层大量的spring，然后接口，从idea里面跟几下子就找不到代码了。 后来研究了下才发现，原来接口定义
+用了个Qualifier的注解，所以来学习一下。
 
 ## FeignClient
 - 用来修饰接口类型
@@ -21,6 +22,9 @@ JsonInclude  是一个类级别的设置，JsonInclude.Include.NON_EMPTY标识�
 
 OpenFeign是什么？
 OpenFeign是一个声明式的web服务客户端，让编写web服务客户端变的非常容易，只需要创建一个接口并在接口上添加注解即可，openFeign的前身是Feign，后者目前已经停更了，openFeign是SpringCloud在Feign的基础上支持了Spring MVC的注解，并通过动态代理的方式产生实现类来做负载均衡并进行调用其他服务。
+
+## SpringQueryMap
+如果我们是Get请求，但是请求的参数又很多， 比如我在查询并分页的时候，我们的入参只有一个查询的keyword, 但是又有分页的一些信息pageNum, pageSize, totalSize, 这时候我们一般会把这些数据封装有一个pojo, 但是feign的get方式又不支持，这里我们可以使用openfeign提供的@SpringQueryMap来解决这个问题，传递对象参数，让框架自动解析
 
 ## CronTrigger
 
