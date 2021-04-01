@@ -6,6 +6,15 @@
 2. 总结常用的一些用法，包括注解啊之类
 3. 等把基本用法玩熟了，能够熟练阅读代码和写出代码之后，开始尝试研究底层原理。
 
+# Ribbon
+这个东西也是头一回见，貌似使用来做load balancing的，可以了解一下
+
+@RibbonClients遇到了坑，初始化问题。
+
+## disf
+
+
+
 # Feign 和 Hystrix
 
 ## FeignClient
