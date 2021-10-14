@@ -16,3 +16,6 @@
 这个参数感觉是driver的内存设置，不知道上限在哪，加多少合适
 - executor-memory 12g \
 这个同理 
+
+
+./script/util/run_train_feature.sh 20210813 chencan_test002 chencan_test002 > ./logs/chencan_test001.train.feature.20210813
