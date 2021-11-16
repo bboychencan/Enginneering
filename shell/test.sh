@@ -2,11 +2,8 @@
 
 #set -u
 
-featureIndexFile="/Users/chencan/Personal/Enginneering/shell/usersaa"
+date=$(date '+%Y-%m-%d')
+x=$(date --date="2021-10-21 0 day" +%Y-%m-%d)
 
-if [ -f "${featureIndexFile}" ]
-then
-    echo "[DEBUG] findex file exists"
-else
-    echo "[ERROR] findex file does not exist"
-fi
+echo $x
+
